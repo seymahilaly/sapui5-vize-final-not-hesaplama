@@ -1,35 +1,51 @@
-## Application Details
-|               |
-| ------------- |
-|**Generation Date and Time**<br>Tue Jul 14 2026 11:08:44 GMT+0300 (GMT+03:00)|
-|**App Generator**<br>SAP Fiori Application Generator|
-|**App Generator Version**<br>1.28.0|
-|**Generation Platform**<br>Visual Studio Code|
-|**Template Used**<br>Basic|
-|**Service Type**<br>None|
-|**Service URL**<br>N/A|
-|**Module Name**<br>project1|
-|**Application Title**<br>App Title|
-|**Namespace**<br>com.detaysoft|
-|**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.150.0|
-|**Enable TypeScript**<br>False|
-|**Add Eslint configuration**<br>True, see https://www.npmjs.com/package/@sap-ux/eslint-plugin-fiori-tools#rules for the eslint rules.|
+# Vize-Final Not Hesaplama
 
-## project1
+SAPUI5 ile geliştirdiğim, vize ve final notlarından ortalama hesaplayan basit bir web uygulaması. Staj sürecinde SAPUI5 öğrenirken yaptığım projelerden biridir.
 
-An SAP Fiori application.
+## Özellikler
 
-### Starting the generated app
+- Vize ve final notu girişi
+- Not ağırlıklarına göre (vize %[40], final %[60]) ortalama hesaplama
+- [Geçti/Kaldı durumunun gösterilmesi]
+- XML View ve Controller yapısıyla MVC mimarisi
 
--   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  To launch the generated application, run the following from the generated application root folder:
+## Kullanılan Teknolojiler
+
+- SAPUI5 1.150.0 (sap_horizon teması)
+- JavaScript (XML Views, MVC)
+- SAP Fiori Application Generator (Basic şablon)
+- UI5 Tooling
+- Node.js
+
+## Proje Yapısı
 
 ```
-    npm start
+webapp/
+├── controller/    # App ve Main controller dosyaları
+├── view/          # XML view dosyaları
+├── model/         # Model tanımları
+├── i18n/          # Dil dosyaları
+├── css/           # Stil dosyaları
+├── test/          # Unit ve integration testleri
+├── Component.js
+├── manifest.json
+└── index.html
 ```
 
-#### Pre-requisites:
+## Kurulum ve Çalıştırma
 
-1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
+Gereksinim: [Node.js](https://nodejs.org) (LTS sürüm)
 
+```bash
+git clone https://github.com/seymahilaly/sapui5-vize-final-not-hesaplama.git
+cd sapui5-vize-final-not-hesaplama
+npm install
+npm start
+```
 
+Uygulama tarayıcıda açılır. Açılmazsa terminalde yazan adresi (genellikle `http://localhost:8080`) tarayıcıya yapıştır.
+
+## Geliştirici
+
+Şeyma Hilal Yeşildal  
+GitHub: [@seymahilaly](https://github.com/seymahilaly)
