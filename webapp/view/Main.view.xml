@@ -1,0 +1,81 @@
+<mvc:View controllerName="com.detaysoft.project1.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"> <Page id="page" title="Vize Final Not Hesaplayıcı">
+        <content>
+            
+            <l:FixFlex vertical="false" class="sapUiContentPadding">
+                
+                <l:fixContent>
+                    <VBox width="250px" class="sapUiMediumMarginTop sapUiMediumMarginBegin">
+                        <Title text="Harf Notu Baremi" level="H4" class="sapUiSmallMarginBottom" />
+                        
+                        <VBox class="sapUiTinyMarginBottom" style="border-left: 4px solid #bb0000; padding-left: 12px;">
+                            <ObjectStatus text="FF  :  0 -  45 " state="Error" />
+                            <ObjectStatus text="FD : 45 - 55" state="Error" />
+                        </VBox>
+
+                        <VBox class="sapUiTinyMarginBottom" style="border-left: 4px solid #e78c07; padding-left: 12px; margin-top: 12px;">
+                            <ObjectStatus text="DD : 55 - 65" state="Warning" />
+                            <ObjectStatus text="CC : 65 - 75" state="Warning" />
+                        </VBox>
+
+                        <VBox style="border-left: 4px solid #2b7d2b; padding-left: 12px; margin-top: 12px;">
+                            <ObjectStatus text="BB : 75 - 85" state="Success" />
+                            <ObjectStatus text="AA : 85 - 100" state="Success" />
+                        </VBox>
+                    </VBox>
+                </l:fixContent>
+
+                <l:flexContent>
+                    <FlexBox 
+                        alignItems="Center" 
+                        justifyContent="Center" 
+                        height="100%" 
+                        width="100%"
+                        class="sapUiForceWidthAuto">
+                        
+                        
+                        
+                        <VBox class="sapUiMediumMargin" width="500px">
+                            
+                            <HBox alignItems="End"  class="sapUiSmallMarginBottom" justifyContent="Start" gap="1.5rem">
+                                <VBox class="sapUiSmallMarginEnd" width="200px">
+                                    <Label text="Vize Notunu giriniz:" />
+                                    <Input id="vizeInput" type="Number" placeholder="Vize notunu girin..." value="{notModeli>/vizeNotu}" />
+                                </VBox>
+                                
+                                <VBox width="170px">
+                                    <Label text="Vize hesaplama yüzdesi:" />
+                                    <Input id="VizeHesapla" type="Number" liveChange="onDeneme" value="{notModeli>/vizeYuzdesi}" />
+                                </VBox>
+                            </HBox>
+
+                            <HBox alignItems="End"  class="sapUiMediumMarginBottom" justifyContent="Start" gap="1.5rem">
+                                <VBox class="sapUiSmallMarginEnd" width="200px">
+                                    <Label text="Final notunu giriniz:" />
+                                   <Input id="finalInput" type="Number" placeholder="Final notunu girin..." value="{notModeli>/finalNotu}" />
+                                </VBox>
+                                
+                                <VBox width="170px">
+                                    <Label text="Final hesaplama yüzdesi:" />
+                                    <Input id="FinalHesapla" type="Number" liveChange="onDeneme" value="{notModeli>/finalYuzdesi}" />
+                                </VBox>
+                            </HBox>
+
+                            <HBox justifyContent="Center" class="sapUiSmallMarginBottom"  width="90%">
+                                <Button text="Hesapla" press="onCalculate" type="Emphasized" width="150px" />
+                            </HBox>
+
+                            <VBox alignItems="Center" class="sapUiMediumMarginTop" width="90%">
+                                <Title id="resultText" text="{notModeli>/sonucYazisi}" level="H2" textAlign="Center" />
+                            </VBox>
+
+                        </VBox> 
+                    </FlexBox>
+                </l:flexContent>
+
+            </l:FixFlex>
+        </content>
+    </Page>
+</mvc:View>
