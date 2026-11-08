@@ -6,7 +6,7 @@ SAPUI5 ile geliştirdiğim, vize ve final notlarından ortalama hesaplayan basit
 
 - Vize ve final notu girişi
 - Not ağırlıklarına göre (vize %[40], final %[60]) ortalama hesaplama
-- [Geçti/Kaldı durumunun gösterilmesi]
+- Geçti/Kaldı durumunun gösterilmesi
 - XML View ve Controller yapısıyla MVC mimarisi
 
 ## Kullanılan Teknolojiler
